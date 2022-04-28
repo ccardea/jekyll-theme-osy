@@ -1,6 +1,30 @@
 ---
 title: OSY Home
 layout: default
+left-title: Samkhya
+left-content: idx-text/left.html
+mid-title: Yoga
+mid-content: idx-text/mid.html
+right-title: Kundalini
+right-content: idx-text/right.html
 ---
-
- 
+<div class="w3-cell-row w3-theme" style="width:100%">
+    <section class="w3-panel w3-border-right w3-theme-light w3-cell w3-mobile">
+        <header class="w3-text-theme">
+            <h2>{{ page.left-title }}</h2>
+        </header>
+        <div>{% include_relative {{ page.left-content }} %}</div>
+    </section>
+    <section class="w3-panel w3-theme-light w3-cell w3-mobile">
+        <header class="w3-text-theme">
+            <h2>{{ page.mid-title }}</h2>
+        </header>
+        <div>{% include_relative {{ page.mid-content }} %}</div>
+    </section>
+    <section class="w3-panel w3-border-left w3-theme-light w3-cell w3-mobile">
+        <header class="w3-text-theme">
+            <h2>{{ page.right-title }}</h2>
+        </header>
+        <div>{% include_relative {{ page.right-content }} %}</div>
+    </section>
+</div> 
